@@ -4,9 +4,9 @@ Rails.application.routes.draw do
     get 'things', to: 'things#index'
   end
 
-  get '*page', to: 'static#index', constraints: ->(req) do
+  get '*page', to: 'static#index', constraints: lambda { |req|
     !req.xhr? && req.format.html?
-  end
+  }
   # Defines the root path route ("/")
   # root "articles#index"
   root 'static#index'

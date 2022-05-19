@@ -1,6 +1,10 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+# Webpacker and React
+gem 'webpacker'
+gem 'react-rails'
+
 ruby "3.1.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
